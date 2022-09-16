@@ -14,10 +14,12 @@ const CountryDetail = () => {
             .then(data => setCountry(data))
     }, [country])
     return (
-        <div>
-            <h2>Hey Country details Name: {params.countryName}</h2>
+        <div className='mt-4'>
             {
-                country.map(detail => <CountryDetails detail={detail}></CountryDetails>)
+                country.map(detail => <CountryDetails
+                    key={detail.cca3}
+                    detail={detail}
+                ></CountryDetails>)
             }
         </div>
     )

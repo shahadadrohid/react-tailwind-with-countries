@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Country = (props) => {
-    console.log(props.country.cca3)
     const { name, population, flags } = props.country;
     const navigate = useNavigate();
     const showCountryDetail = () => {
