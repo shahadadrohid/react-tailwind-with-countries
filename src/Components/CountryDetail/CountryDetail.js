@@ -8,7 +8,6 @@ const CountryDetail = () => {
     const [country, setCountry] = useState([]);
     useEffect(() => {
         const url = `https://restcountries.com/v3.1/name/${params.countryName}`
-        console.log(url)
         fetch(url)
             .then(res => res.json())
             .then(data => setCountry(data))
